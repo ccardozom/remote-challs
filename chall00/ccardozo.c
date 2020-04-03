@@ -1,4 +1,7 @@
 #include <stdlib.h>
+#include <assert.h>
+#include <stdio.h>
+#include <string.h>
 
 char *hv_rgb2hex(int r, int g, int b)
 {   //Variables
@@ -6,7 +9,7 @@ char *hv_rgb2hex(int r, int g, int b)
     char    *base = "0123456789abcdef";
     int     numbase = 16, auxrgb = 0, index = 0;
     // Crea un espacio de memoria
-    if (!(rgb = (char *)malloc(255)))
+    if (!(rgb = (char *)malloc(8)))
         return (NULL);
     rgb[index++] = '#'; 
     if (r >= 0 && r <= 255) //verificamos que r cumpla la condicion
